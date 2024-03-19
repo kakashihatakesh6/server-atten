@@ -1,9 +1,9 @@
-const connectToMongo = require("./db");
+// const connectToMongo = require("./db");
 const express = require('express');
 const http = require('http');
 var cors = require('cors');
 
-connectToMongo();
+// connectToMongo();
 const app = express();
 const PORT = process.env.PORT || 5000 ;
 // const port = 5000;
@@ -21,7 +21,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/notes', require('./routes/notes'));
 
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`Mark Attendance backend listening on port http://localhost:${PORT}`);
 });
 
