@@ -15,7 +15,6 @@ app.use(express.json());
 //     res.json({message: "Hello from server!"});
 // });
 app.use('/api/auth', require('./routes/auth'));
-app.use('/api/notes', require('./routes/notes'));
 app.use('/api/reports', require('./routes/reports'));
 
 app.listen(PORT, () => {
